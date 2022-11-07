@@ -1,7 +1,9 @@
 <script setup>
-    import Nav from '../Components/Nav.vue'
+    import Layout from '../Layout/Layout.vue'
 </script>
 <template>
-    <h1>Settings</h1>
-    <Nav />
+    <Layout>
+
+        <h1>Settings</h1>
+    </Layout>
 </template>
