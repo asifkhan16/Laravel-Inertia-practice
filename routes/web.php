@@ -29,8 +29,10 @@ Route::get('/', function(){
     return Inertia::render('Home');
 });
 Route::get('/users', function(){
-    sleep(2);
-    return Inertia::render('Users');
+    // sleep(2);
+    return Inertia::render('Users',[
+        'time' => now()->toTimeString()
+    ]);
 });
 Route::get('/settings', function(){
     return Inertia::render('Settings');
@@ -38,3 +40,4 @@ Route::get('/settings', function(){
 Route::post('/logout', function(){
     dd('logout is treggar');
 });
+

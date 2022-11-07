@@ -1,7 +1,10 @@
 <script setup>
-    import Nav from '../Components/Nav.vue'
+    import Layout from '../Layout/Layout.vue'
 </script>
 <template>
-    <h1>Home</h1>
-    <Nav />
+
+    <Layout>
+        <h1>Home</h1>
+    </Layout>
+    
 </template>
