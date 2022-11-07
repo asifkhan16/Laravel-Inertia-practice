@@ -15,5 +15,12 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Test');
+    return Inertia::render('Test',[
+        'name' => 'Asif Khan',
+        'tools' => [
+            'Laravel',
+            'Vue',
+            'Inertia'
+        ]
+    ]);
 });
