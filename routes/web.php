@@ -15,5 +15,5 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Pages/test');
+    return Inertia::render('Test');
 });
