@@ -13,8 +13,6 @@ createInertiaApp({
 });
 // progress not working
 InertiaProgress.init({
-  delay:250,
-  color:'red',
-  includeCSS: 'true',
-  
+  includeCSS: true,
+  showSpinner : true
 });
