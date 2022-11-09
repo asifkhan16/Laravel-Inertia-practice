@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Models\User;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +31,21 @@ Route::get('/', function(){
     return Inertia::render('Home');
 });
 Route::get('/users', function(){
-    // sleep(2);
+    // sleep(1);
+    // return dd(User::paginate(10)->toArray());
     return Inertia::render('Users',[
-        'time' => now()->toTimeString()
+        'users' => User::Query()
+            ->when(Request::input('search'),function($query,$search){
+                $query->where('name','like',"%{$search}%");
+            })
+            ->paginate(10)
+            ->withQueryString()
+            ->through(fn($user)=>[
+                'name' => $user->name,
+                'id' => $user->id
+            ]),
+        'filters' => Request::only(['search'])
+        // 'users' => User::paginate(10),
     ]);
 });
 Route::get('/settings', function(){

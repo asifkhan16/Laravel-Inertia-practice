@@ -10,7 +10,7 @@
 <template>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
-          <Link class="navbar-brand" href="/">Navbar</Link>
+          <Link class="navbar-brand" href="/">My App</Link>
           <!-- <span>Welcome {{ userName }}</span> -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

@@ -4,9 +4,8 @@
 <template>
     <Nav />
     <section>
-        <div style="width:50%; margin: 10px auto">
+        <div class="container">
             <slot/>
-
         </div>
     </section>
 </template>
